@@ -12,7 +12,6 @@ API_KEY = "oj1xWjuWMuDtSVf9O9dF16vwIxMPSlV0ONRGH5NYeHD3gI8ydt"
 @app.post("/identify")
 async def identify_plant_api(file: UploadFile = File(...)):
     try:
-        # Save uploaded image to a temp file
         contents = await file.read()
         encoded_string = base64.b64encode(contents).decode("utf-8")
 
